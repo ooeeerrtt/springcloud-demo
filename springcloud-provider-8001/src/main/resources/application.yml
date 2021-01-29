@@ -1,0 +1,18 @@
+server:
+  port: 8001  # 服务端口号
+
+spring:
+  application:
+    name: nacos-payment-provider  # 应用名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848  #配置Nacos地址
+        ip: 192.168.3.41  #由于我本地存在虚拟网卡会找不到本机网卡，此处指定本机网卡
+
+# 暴露所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

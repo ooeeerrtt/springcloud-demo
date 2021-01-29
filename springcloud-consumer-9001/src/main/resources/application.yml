@@ -1,0 +1,14 @@
+server:
+  port: 9001  # 端口号
+
+spring:
+  application:
+    name: nacos-order-consumer  # 应用名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848  # 注册中心地址
+        ip: 192.168.3.41  # 本机ip
+
+service-url:
+  nacos-user-service: http://nacos-payment-provider  # 主要用于代码内获取配置
